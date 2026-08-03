@@ -109,3 +109,76 @@ observer.observe(element);
 
 
 });
+/*==================================================
+EFEITO DE SCROLL SUAVE NOS LINKS
+==================================================*/
+
+
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+
+scrollLinks.forEach(link=>{
+
+
+link.addEventListener("click",(e)=>{
+
+
+e.preventDefault();
+
+
+const target = document.querySelector(
+link.getAttribute("href")
+);
+
+
+if(target){
+
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+}
+
+
+});
+
+
+});
+
+
+
+/*==================================================
+HEADER COM EFEITO AO ROLAR
+==================================================*/
+
+
+const header = document.querySelector(".header");
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(window.scrollY > 50){
+
+
+header.classList.add("scrolled");
+
+
+}else{
+
+
+header.classList.remove("scrolled");
+
+
+}
+
+
+});
+
+
+
+});

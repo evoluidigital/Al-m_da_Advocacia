@@ -179,6 +179,20 @@ header.classList.remove("scrolled");
 
 });
 
+/*==================================================
+EFEITO DE ENTRADA DA PÁGINA
+==================================================*/
+
+
+window.addEventListener("load",()=>{
+
+
+document.body.classList.add("loaded");
+
+
+});
+
+
 
 
 });
